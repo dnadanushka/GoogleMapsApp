@@ -1,0 +1,33 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.mapsapp.test" >
+4
+5    <uses-sdk
+5-->/home/danushka/AndroidStudioProjects/mapsApp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger4642629135287853797.xml:5:5-74
+6        android:minSdkVersion="15"
+6-->/home/danushka/AndroidStudioProjects/mapsApp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger4642629135287853797.xml:5:15-41
+7        android:targetSdkVersion="29" />
+7-->/home/danushka/AndroidStudioProjects/mapsApp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger4642629135287853797.xml:5:42-71
+8
+9    <instrumentation
+9-->/home/danushka/AndroidStudioProjects/mapsApp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger4642629135287853797.xml:11:5-15:69
+10        android:name="androidx.test.runner.AndroidJUnitRunner"
+10-->/home/danushka/AndroidStudioProjects/mapsApp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger4642629135287853797.xml:11:22-76
+11        android:functionalTest="false"
+11-->/home/danushka/AndroidStudioProjects/mapsApp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger4642629135287853797.xml:14:22-52
+12        android:handleProfiling="false"
+12-->/home/danushka/AndroidStudioProjects/mapsApp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger4642629135287853797.xml:13:22-53
+13        android:label="Tests for com.example.mapsapp"
+13-->/home/danushka/AndroidStudioProjects/mapsApp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger4642629135287853797.xml:15:22-67
+14        android:targetPackage="com.example.mapsapp" />
+14-->/home/danushka/AndroidStudioProjects/mapsApp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger4642629135287853797.xml:12:22-65
+15
+16    <application android:debuggable="true" >
+16-->/home/danushka/AndroidStudioProjects/mapsApp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger4642629135287853797.xml:7:5-9:19
+16-->/home/danushka/AndroidStudioProjects/mapsApp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger4642629135287853797.xml:7:18-43
+17        <uses-library android:name="android.test.runner" />
+17-->/home/danushka/AndroidStudioProjects/mapsApp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger4642629135287853797.xml:8:9-60
+17-->/home/danushka/AndroidStudioProjects/mapsApp/app/build/intermediates/tmp/manifest/androidTest/debug/manifestMerger4642629135287853797.xml:8:23-57
+18    </application>
+19
+20</manifest>
