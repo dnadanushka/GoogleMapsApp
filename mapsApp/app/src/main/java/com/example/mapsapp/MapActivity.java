@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.inputmethod.EditorInfo;
+import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,6 +24,7 @@ import com.example.mapsapp.directionhelpers.FetchURL;
 import com.example.mapsapp.directionhelpers.TaskLoadedCallback;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.places.Places;
@@ -37,6 +39,9 @@ import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.libraries.places.compat.Place;
+import com.google.android.libraries.places.compat.ui.PlaceAutocompleteFragment;
+import com.google.android.libraries.places.compat.ui.PlaceSelectionListener;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -84,6 +89,17 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         mStartText = (AutoCompleteTextView) findViewById(R.id.input_search);
         mEndText = (AutoCompleteTextView) findViewById(R.id.inupt_search_1);
 
+        String[] languages = {"Kandy","Kalmunai","Vavuniya","Galle","Trincomalee","Batticaloa","Jaffna","Katunayake","Dambulla","Kolonnawa","Anuradhapura","Ratnapura"};
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.select_dialog_singlechoice, languages);
+
+        mEndText.setThreshold(1);
+        //Set the adapter
+        mEndText.setAdapter(adapter);
+
+        mStartText.setThreshold(1);
+        //Set the adapter
+        mStartText.setAdapter(adapter);
 
         getLocationPermition();
         mGoogleApiClient = new GoogleApiClient
@@ -101,12 +117,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
 
 
-
-
-
-
-        mPlaceAutocompleteAdapter = new PlaceAutocompleteAdapter(MapActivity.this,mGoogleApiClient,LAT_LNG_BOUNDS,null);
-        mStartText.setAdapter(mPlaceAutocompleteAdapter);
         mStartText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
@@ -141,6 +151,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             }
         });
     }
+
 
 
     private void geolocate(int startOrEnd) {
