@@ -89,7 +89,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         mStartText = (AutoCompleteTextView) findViewById(R.id.input_search);
         mEndText = (AutoCompleteTextView) findViewById(R.id.inupt_search_1);
 
-        String[] languages = {"Kandy","Kalmunai","Vavuniya","Galle","Trincomalee","Batticaloa","Jaffna","Katunayake","Dambulla","Kolonnawa","Anuradhapura","Ratnapura"};
+        String[] languages = {"Colombo","Negombo","Kandy","Kalmunai","Vavuniya","Galle","Trincomalee","Batticaloa","Jaffna","Katunayake","Dambulla","Kolonnawa","Anuradhapura","Ratnapura"};
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.select_dialog_singlechoice, languages);
 
